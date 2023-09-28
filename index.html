@@ -28,7 +28,7 @@
     <div class="col-bio">
       <p align="center" lang="zh-cn"><name>Kewen Peng</name></p>
 
-      <p>I am a Ph.D. student in <a href="https://www.csc.ncsu.edu">Department of Computer Science</a> at <a href="https://www.ncsu.edu">North Carolina State University</a> under the supervision of <a href="http://menzies.us">Dr. Tim Menzies</a>. I joined the Real-world Artificial Intelligence for Software Engineering (<a href="http://ai4se.net/">RAISE</a>) lab in 2019.
+      <p>I am a Ph.D. student in <a href="https://www.csc.ncsu.edu">Department of Computer Science</a> at <a href="https://www.ncsu.edu">North Carolina State University</a> under the supervision of <a href="http://timm.fyi/">Dr. Tim Menzies</a>. I joined the Real-world Artificial Intelligence for Software Engineering (<a href="http://ai4se.net/">RAISE</a>) lab in 2019.
       </p>
       
       <p>Before coming to NC State, I earned my B.S. degree of Computer Science from <a href="https://www.wfu.edu/">Wake Forest University </a> in 2019, where I also earned my B.A. degree of Mathematics.</p>
@@ -49,7 +49,8 @@
     <p> My research interests include using data mining and artificial intelligence methods to solve real-world problems
       in software engineering field. I am also interested in making AI models more explainable and actionable. My recent research
       includes (a) exploring the disagreement problem in multi-objective optimization, and (b) interpretable mitigation of bias in
-      ML software.
+      ML software. This May I'm presenting my paper at the 45th International Conference on Software Engineering. Please check out
+      <a href="https://conf.researchr.org/details/icse-2023/icse-2023-journal-first-papers/50/FairMask-Better-Fairness-via-Model-based-Rebalancing-of-Protected-Attributes">my presentation</a> here!
     </p>
   </div>
 	
@@ -58,14 +59,26 @@
     <heading>Projects</heading>
   </div>
 
+    <div class="row">
+    <subheading>NLP & Information Retrival</subheading>
+    <li><strong>Persona and Knowledge Empowered Conversational AI:</strong>
+      Designed and implemented a social-chat conversational model, which generates personalized answers to a user’s
+      question based on the user’s persona information and knowledge base. Implemented (a) hierarchical cross attention,
+      and (b) STS-based grounding component to locate context-relevant candidates. Implemented in PyTorch, experimented
+      with BART and GPT-2, the new approach reaches comparable performance to baseline methods and obtained 20% reduction
+      in training and inference cost.
+    </li>
+  </div>
+
+
   <div class="row">
-    <subheading>LAS Funded: Fairness and explanation generation</subheading>
-    <li><strong>Detect and explain bias:</strong> Developing predictive models, measuring fairness in confidential data using various fairness metrics,
+    <subheading>Fairness Enhancement & Explanation Generation</subheading>
+    <li><strong>Detect and explain bias:</strong> Developed predictive models, measuring fairness in confidential data using various fairness metrics,
       and generating explanations for better understanding the internal state of black box models. Experiment results shows that our model can better
       reflect the extent of bias/fairness in the given data space, measured by different fairness metrics.
     </li>
 
-    <li><strong>Bias mitigation:</strong> For widely used fairness datasets, we propose a novel model that can not only achieve better group fairness
+    <li><strong>Bias mitigation:</strong> Prototyped a novel model that can not only achieve better group fairness
       than prior state-of-the-art methods, but also ensure perfect individual fairness as well as procedural justice. Moreover, our approach has trivial
       damage on the predictive power of the original model.
     </li>
@@ -73,7 +86,7 @@
   </div>
 
   <div class="row">
-    <subheading>NSF Funded: Search-base Software Engineering</subheading>
+    <subheading>Search-based Software Engineering</subheading>
     <li><strong>Multi-objective configuration optimization:</strong> Explore potential model disagreement in model-based optimization. Propose
     a dimension reduction approach that generate a hyper-space for mapping configurations while preserving the domination relationship among them.
     The result shows that our simplification can achieve optimizer models of zero disagreement (measured by Kendall's t test),
@@ -82,16 +95,45 @@
 
 
   <div class="row">
-    <heading>Publication</heading>
+    <heading>Selected Publication</heading>
   </div>
 
     <div class="row">
+  <div class="col-proj-pic"><img src="figs/fairness.jpg" ></div>
+    <div class="col-proj-desc">
+      <a href="https://ieeexplore.ieee.org/abstract/document/9951398">
+        <papertitle>FairMask: Better Fairness via Model-Based Rebalancing of Protected Attributes
+</papertitle>
+      </a><br>
+      <strong>Kewen Peng</strong>, Joymallya Chakraborty, Tim Menzies
+      <br> Transactions on Software Engineering (<strong>TSE</strong>), 2023 (accepted) <br>
+      <p>  We propose FairMask, a model-based extrapolation method that is capable of both mitigating bias and
+        explaining the cause. By reasoning and masking the protected attribute, FairMask minimizes the performance loss while
+        achieving perfect procedural justice.</p>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-proj-pic"><img src="figs/veer.png" ></div>
+    <div class="col-proj-desc">
+      <a href="https://dl.acm.org/doi/abs/10.1007/s10664-023-10296-w">
+        <papertitle>VEER: Enhancing the Interpretability of Model-based Optimizations</papertitle>
+      </a><br>
+      <strong>Kewen Peng</strong>, Christian Kaltenecker, Norbert Siegmund, Sven Apel, Tim Menzies
+      <br> Empirical Software Engineering (<strong>EMSE</strong>), 2023 (accepted) <br>
+      <p>  We propose a dimension reduction method called VEER that builds a useful one-dimensional
+        approximation to the original N-objective space. For our largest problem,
+        optimizing with VEER finds as good or better optimizations with zero model disagreements, three orders of magnitude faster.</p>
+    </div>
+  </div>
+
+  <div class="row">
   <div class="col-proj-pic"><img src="figs/nier.png" ></div>
     <div class="col-proj-desc">
       <a href="https://dl.acm.org/doi/10.1145/3324884.3418932">
         <papertitle>Making fair ML software using trustworthy explanation</papertitle>
       </a><br>
-      Joymallya Chakraborty, <strong>Kewen Peng</strong>, <a href="http://menzies.us">Tim Menzies</a>
+      Joymallya Chakraborty, <strong>Kewen Peng</strong>, Tim Menzies
       <br> IEEE/ACM International Conference on Automated Software Engineering (<strong>ASE</strong>), 2020 (accepted) <br>
       <p> Our work concentrates on finding shortcomings of current bias measures and explanation methods. We show how our proposed method based on K nearest neighbors can overcome those shortcomings and find the underlying bias of black box models. Our results are more trustworthy and helpful for the practitioners. </p>
     </div>
@@ -103,7 +145,7 @@
       <a href="https://arxiv.org/pdf/2003.06887.pdf">
         <papertitle>Defect Reduction Planning (using TimeLIME)</papertitle>
       </a><br>
-      <strong>Kewen Peng</strong>, <a href="http://menzies.us">Tim Menzies</a>
+      <strong>Kewen Peng</strong>, <a href="http://timm.fyi/">Tim Menzies</a>
       <br> Transactions on Software Engineering (<strong>TSE</strong>), 2021 (accepted) <br>
       <p> Software comes in releases. An implausible change to software is something that has never been changed in prior releases. When planning how to  reduce defects, it is  better  to  use  plausible  changes,  i.e.,   changes  with some precedence in the prior releases. TimeLIME is a more effective and actionable way to plan defect reduction using sensitivity analysis. </p>
     </div>
